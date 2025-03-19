@@ -18,3 +18,13 @@ class UserResponseSerializer(serializers.Serializer):
     email = serializers.EmailField()
     full_name = serializers.CharField(allow_blank=True, allow_null=True)
 
+class LoginSerializer(serializers.Serializer):
+    username = serializers.CharField(required=False)
+    email = serializers.EmailField(required=False)
+    password = serializers.CharField()
+
+    def validate(self, data):
+        # Either username or email must be provided
+        if not data.get('username') and not data.get('email'):
+            raise serializers.ValidationError("Either username or email must be provided")
+        return data

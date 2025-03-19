@@ -1,0 +1,10 @@
+Create a Django endpoint that handles POST requests for adding users to a PostgreSQL database. 
+The database uses SQLAlchemy ORM.
+
+1. Build a React component that fetches user data from an API (https://jsonplaceholder.typicode.com/users) 
+and displays it in a table with sorting and filtering functionality
+sort by name alphabetical and filter by city
+
+Full-Stack Integration - React Fetching Data from Django API
+How would you optimize a slow PostgreSQL query fetching users with their latest activity logs?
+JWT token authentication for your API

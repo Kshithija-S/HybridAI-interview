@@ -1,0 +1,223 @@
+/* Base table styling */
+.p-datatable {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+/* Table header */
+.p-datatable .p-datatable-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem;
+}
+
+/* Column headers */
+.p-datatable .p-datatable-thead > tr > th {
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  transition: background-color 0.2s;
+}
+
+.p-datatable .p-datatable-thead > tr > th:hover {
+  background-color: #e9ecef;
+}
+
+/* Table cells */
+.p-datatable .p-datatable-tbody > tr > td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+/* Alternating row colors */
+.p-datatable .p-datatable-tbody > tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.p-datatable .p-datatable-tbody > tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Row hover effect */
+.p-datatable .p-datatable-tbody > tr:hover {
+  background-color: #f2f7ff;
+}
+
+/* Custom column class */
+.column {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Loading state */
+.p-datatable.p-datatable-loading .p-datatable-loading-overlay {
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .p-datatable .p-datatable-thead > tr > th,
+  .p-datatable .p-datatable-tbody > tr > td {
+    padding: 0.5rem 0.75rem;
+  }
+}
+/* Column filter dropdown styling */
+.p-column-filter-overlay {
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  min-width: 230px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Filter overlay header */
+.p-column-filter-overlay-header {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Dropdown selection for filter match mode (Starts with, Contains, etc.) */
+.p-column-filter-matchmode-dropdown {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  z-index: 2000;
+}
+
+.p-dropdown-items-wrapper {
+  background-color: #ffffff;
+}
+
+.p-column-filter-matchmode-dropdown .p-dropdown-label {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* Filter input field */
+.p-column-filter-constraint {
+  margin-bottom: 0.75rem;
+  z-index: 9999;
+}
+
+.p-inputtext {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.p-column-filter-constraint .p-inputtext {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.p-column-filter-constraint .p-inputtext:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+/* Add Rule button */
+.p-column-filter-add-rule {
+  background-color: #f8f9fa;
+  border: 1px dashed #ced4da;
+  color: #495057;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.p-column-filter-add-rule:hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.p-column-filter-add-rule .pi {
+  margin-right: 0.25rem;
+}
+
+/* Filter action buttons */
+.p-column-filter-buttonbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.p-column-filter-buttonbar .p-button {
+  font-size: 0.875rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+/* Clear button */
+.p-column-filter-buttonbar .p-button-outlined {
+  background-color: transparent;
+  border: 1px solid #6c757d;
+  color: #6c757d;
+}
+
+.p-column-filter-buttonbar .p-button-outlined:hover {
+  background-color: #f8f9fa;
+}
+
+/* Apply button */
+.p-column-filter-buttonbar .p-button-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.p-column-filter-buttonbar .p-button-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* Filter icon button in column header */
+.p-column-filter {
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.p-column-filter:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.p-column-filter.p-column-filter-menu-button-active {
+  background-color: #e6f7ff;
+  color: #1890ff;
+}
+
+.p-column-filter .pi-filter {
+  font-size: 0.875rem;
+}

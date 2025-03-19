@@ -4,3 +4,13 @@
   padding: 2rem;
   text-align: center;
 }
+
+.register-btn {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 15px;
+  background-color: #007bff;
+  color: aliceblue;
+  border: none;
+  border-radius: 10px;
+}
